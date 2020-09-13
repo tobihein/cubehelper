@@ -1,8 +1,7 @@
 <p>algorithmlist works!</p>
 <div *ngIf="algorithms">
-  <ul >
-    <li *ngFor="let algo of algorithms">
-      Here is an algorithm
-    </li>
-  </ul>
+    <div *ngFor="let algo of algorithms">
+      <span>Here is an algorithm</span>
+      <app-algorithm [algorithm]="algo"></app-algorithm>
+    </div>
 </div>
