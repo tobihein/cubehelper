@@ -16,4 +16,7 @@ export class AlgorithmlistComponent implements OnInit {
     this.algorithms = this.algorithmService.getAlgorithms();
   }
 
+  public getAlgorithms(): Algorithmmodel[] {
+    return this.algorithms;
+  }
 }

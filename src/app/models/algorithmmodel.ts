@@ -16,7 +16,7 @@ export class Algorithmmodel {
   }
 
   public getName(): string {
-    return name;
+    return this.name;
   }
 
   public setMoves(moves: string[]): void {

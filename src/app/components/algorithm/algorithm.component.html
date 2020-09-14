@@ -4,7 +4,15 @@
       <th>id</th><th>name</th><th>moves</th>
     </tr>
     <tr>
-      <td>{{ algorithm.getId() }}</td><td>{{ algorithm.getName() }}</td><td>{{ algorithm.getMoves() }}</td>
+      <td>
+        {{ this.getAlgorithm().getId() }}
+      </td>
+      <td>
+        {{ this.getAlgorithm().getName() }}
+      </td>
+      <td>
+        <app-move *ngFor="let move of this.getAlgorithm().getMoves()" [description]="move"></app-move>
+      </td>
     </tr>
   </table>
 </div>

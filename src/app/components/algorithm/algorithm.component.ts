@@ -1,5 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {Algorithmmodel} from '../../models/algorithmmodel';
+import {MoveComponent} from '../move/move.component';
 
 @Component({
   selector: 'app-algorithm',
@@ -14,4 +15,7 @@ export class AlgorithmComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  public getAlgorithm(): Algorithmmodel{
+    return this.algorithm;
+  }
 }
