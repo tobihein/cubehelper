@@ -17,6 +17,6 @@ export class MoveComponent implements OnInit {
     return this.description;
   }
   public getFilename(): string {
-    return this.description.replace('\'', 'i');
+    return this.description.replace(/\'/g, 'i');
   }
 }
