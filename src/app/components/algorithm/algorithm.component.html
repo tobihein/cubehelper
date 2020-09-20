@@ -11,7 +11,7 @@
         {{ this.getAlgorithm().getName() }}
       </td>
       <td>
-        <app-move *ngFor="let move of this.getAlgorithm().getMoves()" [description]="move"></app-move>
+        <app-move class="oneline" *ngFor="let move of this.getAlgorithm().getMoves()" [description]="move"></app-move>
       </td>
     </tr>
   </table>

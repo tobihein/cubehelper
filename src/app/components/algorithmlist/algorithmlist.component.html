@@ -1,7 +1,5 @@
-<p>algorithmlist works!</p>
 <div *ngIf="this.getAlgorithms()">
     <div *ngFor="let algo of this.getAlgorithms()">
-      <span>Here is an algorithm</span>
       <app-algorithm [algorithm]="algo"></app-algorithm>
     </div>
 </div>
