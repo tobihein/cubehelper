@@ -10,16 +10,28 @@ export class AlgorithmserviceService {
   }
 
   public getAlgorithms(): Algorithmmodel[] {
-    const tperm = this.createAlgorithm('3', 'T-Perm', 'R U R\' U\' R\' F R R U\' R\' U\' R U R\' F\'');
-    const yperm = this.createAlgorithm('4', 'Y-Perm', 'F R U\' R\' U\' R U R\' F\' R U R\' U\' R\' F R F\'');
-    const jpermRight = this.createAlgorithm('5', 'J-Perm_Right', 'R U R\' F\' R U R\' U\' R\' F R R U\' R\' U\'');
-    const jpermLeft = this.createAlgorithm('6', 'J-Perm Left', 'L\' U\' L F L\' U\' L U L F\' L\' L\' U L U');
-    const eperm = this.createAlgorithm('7', 'E-Perm', 'L U\' R D D R\' U L\' R U\' L D D L\' U R\'');
-    const npermLeft = this.createAlgorithm('8', 'N-Perm Left', '');
-    const npermRight = this.createAlgorithm('9', 'N-Perm Right', null);
-    const zperm = this.createAlgorithm('10', 'Z-Perm');
-    const vperm = this.createAlgorithm('11', 'V-Perm');
-    return [tperm, yperm, jpermRight, jpermLeft, eperm, npermLeft, npermRight, zperm, vperm];
+    const tperm = this.createAlgorithm('tperm', 'T-Perm', 'R U R\' U\' R\' F R R U\' R\' U\' R U R\' F\'');
+    const yperm = this.createAlgorithm('yperm', 'Y-Perm', 'F R U\' R\' U\' R U R\' F\' R U R\' U\' R\' F R F\'');
+    const jpermRight = this.createAlgorithm('jperm_right', 'J-Perm_Right', 'R U R\' F\' R U R\' U\' R\' F R R U\' R\' U\'');
+    const jpermLeft = this.createAlgorithm('jperm_left', 'J-Perm Left', 'L\' U\' L F L\' U\' L U L F\' L\' L\' U L U');
+    const eperm = this.createAlgorithm('eperm', 'E-Perm', 'L U\' R D D R\' U L\' R U\' L D D L\' U R\'');
+    const aperm1 = this.createAlgorithm('aperm1', 'A-Perm 1', '');
+    const aperm2 = this.createAlgorithm('aperm2', 'A-Perm 2', null);
+    const fperm = this.createAlgorithm('fperm', 'F-Perm');
+    const vperm = this.createAlgorithm('vperm', 'V-Perm');
+    const gperm1 = this.createAlgorithm('gperm1', 'G-Perm 1');
+    const gperm2 = this.createAlgorithm('gperm2', 'G-Perm 2');
+    const gperm3 = this.createAlgorithm('gperm3', 'G-Perm 3');
+    const gperm4 = this.createAlgorithm('gperm4', 'G-Perm 4');
+    const hperm = this.createAlgorithm('hperm', 'H-Perm');
+    const rpermLeft = this.createAlgorithm('rperm_left', 'R-Perm Left');
+    const rpermRight = this.createAlgorithm('rperm_right', 'R-Perm Right');
+    const upermLeft = this.createAlgorithm('uperm_left', 'U-Perm Left');
+    const upermRight = this.createAlgorithm('uperm_right', 'U-Perm Right');
+    const nperm1 = this.createAlgorithm('nperm1', 'N-Perm 1');
+    const nperm2 = this.createAlgorithm('nperm2', 'N-Perm 2');
+    const zperm = this.createAlgorithm('zperm', 'Z-Perm');
+    return [tperm, yperm, jpermRight, jpermLeft, eperm, zperm, vperm, aperm1, aperm2, fperm, gperm1, gperm2, gperm3, gperm4, hperm, rpermLeft, rpermRight, upermLeft, upermRight, nperm1, nperm2];
   }
 
   private createAlgorithm(id: string, name: string, moves = ''): Algorithmmodel {

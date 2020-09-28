@@ -5,10 +5,10 @@
     </tr>
     <tr>
       <td>
-        {{ this.getAlgorithm().getId() }}
+        {{ this.getAlgorithm().getName() }}
       </td>
       <td>
-        {{ this.getAlgorithm().getName() }}
+        <img src="assets/algorithms/{{ this.getAlgorithm().getId() }}.jpg"/>
       </td>
       <td>
         <app-move class="oneline" *ngFor="let move of this.getAlgorithm().getMoves()" [description]="move"></app-move>
