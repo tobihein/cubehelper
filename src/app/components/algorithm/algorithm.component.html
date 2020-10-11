@@ -1,11 +1,14 @@
-<div>
+<div class="bordered">
   <table>
     <tr>
       <th>id</th><th>name</th><th>moves</th>
     </tr>
     <tr>
       <td>
-        {{ this.getAlgorithm().getName() }}
+        {{ this.getAlgorithm().getName() }}<br/>
+        <button (click)="this.toggle()" id="bt">
+          Show/Hide inverted
+      </button>
       </td>
       <td>
         <img src="assets/algorithms/{{ this.getAlgorithm().getId() }}.jpg"/>
@@ -14,5 +17,17 @@
         <app-move class="oneline" *ngFor="let move of this.getAlgorithm().getMoves()" [description]="move"></app-move>
       </td>
     </tr>
+    <ng-container *ngIf="this.show()">
+      <tr class="dotted">
+        <td class="dotted">
+          inverted
+        </td>
+        <td class="dotted">
+        </td>
+        <td class="dotted" >
+          <app-move class="oneline" *ngFor="let move of this.getInvertedAlgorithm()" [description]="move"></app-move>
+        </td>
+      </tr>
+    </ng-container>
   </table>
 </div>
