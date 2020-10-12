@@ -17,13 +17,13 @@ export class AlgorithmserviceService {
     const aperm2 = this.createAlgorithm('aperm2', 'A-Perm 2', null);
     const fperm = this.createAlgorithm('fperm', 'F-Perm', 'R\' U\' F\' R U R\' U\' R\' F R2 U\' R\' U\' R U R\' U R');
     const vperm = this.createAlgorithm('vperm', 'V-Perm', 'R\' U R\' Dw\' R\' F\' R2 U\' R\' U R\' F R F');
-    const gperm1 = this.createAlgorithm('gperm1', 'G-Perm 1');
-    const gperm2 = this.createAlgorithm('gperm2', 'G-Perm 2');
-    const gperm3 = this.createAlgorithm('gperm3', 'G-Perm 3');
-    const gperm4 = this.createAlgorithm('gperm4', 'G-Perm 4');
+    const gperm1 = this.createAlgorithm('gperm1', 'G-Perm', 'R U R\' y\' R2 Uw\' R U\' R\' U R\' Uw R2');
+    const gperm2 = this.createAlgorithm('gperm2', 'G-Perm 2', 'R\' U\' R y R2 Uw R\' U R U\' R Uw\' R2');
+    const gperm3 = this.createAlgorithm('gperm3', 'G-Perm 3', 'R2 Uw\' R U\' R U R\' Uw R2 y R U\' R\'');
+    const gperm4 = this.createAlgorithm('gperm4', 'G-Perm 4', 'R2 Uw R\' U R\' U\' R Uw\' R2 y\' R\' U R');
     const hperm = this.createAlgorithm('hperm', 'H-Perm');
-    const rpermLeft = this.createAlgorithm('rperm_left', 'R-Perm Left');
-    const rpermRight = this.createAlgorithm('rperm_right', 'R-Perm Right');
+    const rpermLeft = this.createAlgorithm('rperm_left', 'R-Perm Left', 'L U2 L\' U2 L F\' L\' U\' L U L F L2 U');
+    const rpermRight = this.createAlgorithm('rperm_right', 'R-Perm Right', 'R\' U2 R U2 R\' F R U R\' U\' R\' F\' R2 U\'');
     const upermLeft = this.createAlgorithm('uperm_left', 'U-Perm Left');
     const upermRight = this.createAlgorithm('uperm_right', 'U-Perm Right');
     const nperm1 = this.createAlgorithm('nperm1', 'N-Perm 1');
@@ -55,7 +55,7 @@ export class AlgorithmserviceService {
 
   private invert(moves: string[]): string[] {
     const inverted: string[] = [];
-    moves.forEach ( m => {
+    moves.slice().reverse().forEach ( m => {
       if(m.endsWith('\'')) {
         inverted.push(m.substring(0, m.length-1))
       } else {
