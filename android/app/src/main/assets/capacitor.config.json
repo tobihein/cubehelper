@@ -1,0 +1,13 @@
+{
+  "appId": "de.tokethesa.cubehelper",
+  "appName": "cubehelper",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "dist/cubehelper",
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 0
+    }
+  },
+  "cordova": {}
+}
