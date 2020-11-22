@@ -26,9 +26,11 @@ export class AlgorithmserviceService {
     const rpermRight = this.createAlgorithm('rperm_right', 'R-Perm Right', 'R\' U2 R U2 R\' F R U R\' U\' R\' F\' R2 U\'');
     const upermLeft = this.createAlgorithm('uperm_left', 'U-Perm Left');
     const upermRight = this.createAlgorithm('uperm_right', 'U-Perm Right');
-    const nperm1 = this.createAlgorithm('nperm1', 'N-Perm 1');
-    const nperm2 = this.createAlgorithm('nperm2', 'N-Perm 2');
-    const zperm = this.createAlgorithm('zperm', 'Z-Perm');
+    const nperm1 = this.createAlgorithm('nperm1', 'N-Perm 1', 'R\' U R U\' R\' F\' U\' F R U R\' F R\' F\' R U\' R');
+    const nperm2 = this.createAlgorithm('nperm2', 'N-Perm 2', 'R U R\' U R U R\' F\' R U R\' U\' R\' F R2 U\' R\' U2 R U\' R\'');
+    // const zperm = this.createAlgorithm('zperm', 'Z-Perm', 'R\' U\' R\' F R F\' U R F\' U\' L\' U L F');
+    // const zperm = this.createAlgorithm('zperm', 'Z-Perm', 'R\' U\' R2 U R U R\' U\' R U R U\' R U\' R\'');
+    const zperm = this.createAlgorithm('zperm', 'Z-Perm', 'U R\' U\' R U\' R U R U\' R\' U R U R2 U\' R\' U');
     this.algorithms = [tperm, yperm, jpermRight, jpermLeft, eperm, zperm, vperm, aperm1, aperm2, fperm, gperm1, gperm2, gperm3, gperm4, hperm, rpermLeft, rpermRight, upermLeft, upermRight, nperm1, nperm2];
   }
 
